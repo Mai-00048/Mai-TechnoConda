@@ -1,0 +1,88 @@
+/* Footer container */
+.site-footer {
+    margin-top: 6%;
+    background-color: #f0f0f0;
+    padding: 70px 30px 3%; /* Increase padding to adjust height */
+    text-align: center;
+    margin-bottom: 10%; /* Add margin to the bottom of the footer */
+ 
+  }
+  
+  .site-footer__linklist li a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set the color of links to black */
+    writing-mode: sideways-rl; /* Make text vertical */
+    display: block; /* Change display to block */
+    margin-bottom: 2px; /* Add space between vertical texts */
+
+  
+  }
+  .social-circle {
+    display: inline-block;
+    width: 70px; /* Width of the circle */
+    height: 70px; /* Height of the circle */
+    border-radius: 50%; /* Make it circular */
+    background-color: #f0f0f0; /* Background color */
+    text-align: center; /* Center the content */
+    margin-right: 20px; /* Adjust spacing */
+  }
+  
+  .social-circle a {
+    display: block; /* Full link area */
+    width: 100%;
+    height: 100%;
+  }
+  
+  .social-circle img {
+    width: 50%; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 25%; /* Adjust vertical position */
+  }
+  
+  .social-circle {
+    display: inline-block;
+    margin-right: 10px; /* Adjust as needed */
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Background color of the circle */
+    width: 40px; /* Width of the circle */
+    height: 40px; /* Height of the circle */
+    text-align: center;
+  }
+  
+  .social-circle img {
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    margin: 5px; /* Adjust as needed */
+  }
+  
+  /* Social icons list */
+  .social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    display: inline;
+    margin-right: 10px; /* Adjust spacing between icons */
+  }
+  
+  /* Link list */
+  .site-footer__linklist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .site-footer__linklist li {
+    display: inline;
+    margin-right: 10px; /* Adjust spacing between links */
+  }
+  
+  /* Powered by text */
+  .footer__powered_by {
+    display: block;
+    margin-top: 20px; /* Adjust spacing from link list */
+  }
+  
+   

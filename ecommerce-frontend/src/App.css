@@ -1,0 +1,35 @@
+/* App.css */
+/* Styles for the header */
+header {
+
+}
+
+  
+  /* Styles for the menu */
+  .horizontal-menu {
+    list-style-type: none;
+    padding: 10px 0; /* Add padding to the top and bottom */
+    margin: 0;
+    text-align: center; /* Align the menu to the center */
+    position: absolute;
+    bottom: 0; /* Position the menu at the bottom of the header */
+    left: 50%; /* Center the menu horizontally */
+    transform: translateX(-50%); /* Center the menu horizontally */
+  }
+  
+  .horizontal-menu li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .horizontal-menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .horizontal-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Tajawal', sans-serif;
+  }
+  
+  

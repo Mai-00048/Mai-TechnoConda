@@ -1,0 +1,365 @@
+/* Header.css */
+/* Styles for the header */
+header {
+    position: relative;
+    width: 100%;
+    height: 680px; /* Increase the height of the header */
+    background-image: url('./image-3.png'); /* Background image path */
+    background-size: cover; /* Scale the background image to cover the entire header */
+    background-position: center bottom 140%; /* Position the background image at the center bottom */
+    background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+    background-color: #e4e4eb;
+}
+
+
+.horizontal-menu {
+    list-style-type: none;
+    padding: 10px 0; /* Add padding to the top and bottom */
+    text-align: center; /* Align the menu to the center */
+    position: relative; /* Position the menu relatively */
+    top: 17%; /* Adjust the distance from the top */
+}
+
+.horizontal-menu > li {
+    display: inline-block;
+    position: relative; /* Position the menu items relatively */
+}
+
+.horizontal-menu > li > a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Tajawal', sans-serif;
+    position: relative; /* Position the menu links relatively */
+}
+
+.horizontal-menu > li > a::before {
+    content: ''; /* Add content for pseudo-element */
+    position: absolute; /* Position the pseudo-element absolutely */
+    bottom: -7px; /* Adjust the distance of the underline from the text */
+    left: 0; /* Align the underline to the left */
+    width: 0; /* Start with a width of 0 */
+    height: 2px; /* Height of the underline */
+    background-color: #000; /* Color of the underline */
+    transition: width 0.3s ease; /* Add transition for the width change */
+    z-index: 1; /* Ensure the underline appears in front of the background */
+}
+
+.horizontal-menu > li > a:hover::before {
+    width: 80%; /* Expand the width to 100% on hover */
+}
+
+/* Change background color of the menu when hovered */
+.horizontal-menu:hover {
+    background-color: transparent; /* Set background color to transparent */
+}
+
+ 
+.menu-item-sec {
+    display: inline-block; /* Display menu items inline */
+    position: relative;
+    z-index: 1; /* Ensure the menu item appears in front of the underline */
+}
+
+.menu-item-sec a {
+    display: inline-block; /* Display menu item links inline */
+    padding: 12px; /* Adjust padding as needed */
+    text-decoration: none;
+    color: black; /* Change text color as needed */
+}
+
+
+.menu-item-sec:hover {
+    background-color: rgb(218, 214, 214); /* Change background color when hovered */
+}
+
+/* Style for submenu */
+.submenu {
+    display: none; /* Hide submenu by default */
+    position: absolute; /* Position submenu absolutely */
+    top: 100%; /* Position submenu below the menu item */
+    left: 0; /* Align submenu with the menu item */
+    background-color: rgb(218, 214, 214);/* Background color of submenu */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+.menu-item-sec:hover .submenu {
+    display: block; /* Display submenu when menu item is hovered */
+}
+
+.submenu li {
+    list-style: none; /* Remove default list styles */
+}
+
+/* Increase specificity for submenu link styles */
+.menu-item-sec .submenu li a {
+    color: black; /* Change submenu text color as needed */
+    text-decoration: none; /* Remove underline from submenu links */
+}
+
+.menu-item-sec .submenu li a:hover {
+    color: blue; /* Change submenu text color on hover */
+}
+
+/* Styles for the logo */
+.logo {
+    width: 100px; /* Adjust the width of the logo */
+    height: auto; /* Maintain the aspect ratio of the logo */
+    position: absolute; /* Position the logo absolutely within the header */
+    top: 10%; /* Align the top of the logo to the middle of the header */
+    transform: translateY(-50%); /* Center the logo vertically */
+    left: 48%; /* Adjust the distance of the logo from the left edge of the header */
+}
+
+.moving-line {
+    width: 100%;
+    overflow: hidden;
+}
+
+.moving-text-container {
+    position: relative;
+    width: auto; /* Allow the container to adjust its width based on the content */
+    height: 27px; /* Adjust height as needed */
+    background-color: rgb(157, 152, 152);
+    overflow: hidden; /* Hide overflowing text */
+}
+.moving-text {
+    position: absolute;
+    left: 0; /* Start from the left edge of the container */
+    animation: moveText 6s linear infinite; /* Adjust animation duration as needed */
+    font-family: 'Tajawal', sans-serif;
+    color: white; /* Add color for visibility */
+}
+
+/* General font family for all elements */
+* {
+    font-family: 'Tajawal', sans-serif;
+  }
+  
+  .additional-content {
+    position: absolute;
+    bottom: 15%;
+    right: 6%; /* Adjusted right position */
+    text-align: right; /* Align text to the right */
+  }
+  .additional-content h1 {
+    font-size: 36px; /* Adjust the font size of the title */
+  }
+  
+  .additional-content p {
+    font-size: 18px; /* Adjust the font size of the paragraph */
+  }
+  .button-47 {
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 30px; /* Adjust padding as needed */
+    border: 0;
+    background-color: #fff;
+    font-size: 17.5px;
+    line-height: 30px;
+    font-weight: 300; /* Adjust font weight for skinny font */
+ 
+  }
+
+  @keyframes moveText {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move to the right */
+    }
+}
+
+  /* Use media query for mobile devices */
+@media only screen and (max-width: 767px) {
+    header {
+        position: relative;
+        width: 100%;
+        height: 580px; /* Increase the height of the header */
+        background-image: url('./image-3.png'); /* Background image path */
+        background-size: cover; /* Scale the background image to cover the entire header */
+        background-position: center bottom 140%; /* Position the background image at the center bottom */
+        background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+        background-color: #e4e4eb;
+    }
+    
+    .desktop-version {
+        display: none; /* Hide desktop version on phones */
+    }
+
+    .phone-version {
+        display: block; /* Display phone version */
+    }
+    
+    .bottom-menu {
+        position: fixed;
+        bottom: 30px; /* Adjust the distance from the bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%; /* Adjust the width as needed */
+        height: 50px; /* Increase the height */
+        background-color: #dad482;
+        text-align: center;
+        padding: 10px 0;
+        cursor: pointer;
+        z-index: 9999; /* Set a high z-index to ensure it's displayed in front of other elements */
+    }
+    
+    /* Style for the menu content */
+    .menu-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Style for the text */
+    .menu-text-phone {
+        font-size: 20px;
+        margin-top: 6px; /* Remove default margin */
+    }
+
+    /* Style for the icon */
+    .menu-content i {
+        font-size: 24px; /* Adjust the size of the icon */
+        color: #9e6262; /* Set the color of the icon */
+        margin-left: 12px; /* Adjust margin as needed */
+        margin-top: 6px; /* Remove default margin */
+    }
+    
+    .menu-content-phone {
+        position: fixed;
+        bottom: 10%; /* Adjust the distance from the bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%; /* Adjust the width as needed */
+        height: 0; /* Set initial height to 0 */
+        background-color: #c84a7c;
+        z-index: 999; /* Set a high z-index to ensure it's displayed above other elements */
+        overflow: hidden; /* Hide overflow content */
+        transition: all 0.5s ease; /* Add transition effect for height and position */
+    }
+
+  .menu-content-phone.open {
+    height: 47vh; /* Expand menu content to full viewport height */
+  }
+  /* Style for the submenu items */
+  .menu-content-phone ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-content-phone li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc; /* Add border between submenu items */
+  }
+  
+  .menu-content-phone li:last-child {
+    border-bottom: none; /* Remove border for the last submenu item */
+  }
+  
+  /* Style for submenu links */
+  .menu-content-phone a {
+    text-decoration: none;
+    color: #831e1e;
+    font-size: 16px;
+  }
+  
+  .moving-text-container {
+    display: none;
+}
+
+/* Style for moving text container on phone version */
+.moving-line-phone {
+    position: relative;
+    width: 100%;
+    height: 32px; /* Adjust the height as needed */
+    background-color: #c22828; /* Example background color */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    bottom: 2rem;
+}
+
+.moving-text-container-phone {
+    position: absolute;
+    top: 40%; /* Adjust the vertical position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+   
+    animation: moveText 6s linear infinite; /* Animation for moving text */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+ 
+}
+
+.moving-text-phone {
+    font-family: 'Tajawal', sans-serif;
+    color: white; /* Add color for visibility */
+    position: relative;
+}
+
+@keyframes moveText {
+    0% {
+        left: 0; /* Start position */
+    }
+    100% {
+        left: 100%; /* End position */
+    }
+}
+
+@keyframes moving-text-phone {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move to the right */
+    }
+}
+
+
+    /* Hide the "Menu" text on desktop screens */
+    @media only screen and (min-width: 768px) {
+        .menu-text-phone {
+            display: none;
+        }
+    }
+    
+    /* Style for the menu items */
+    .horizontal-menu {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .horizontal-menu li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc; /* Add border between menu items */
+    }
+    
+    .horizontal-menu li:last-child {
+        border-bottom: none; /* Remove border for the last menu item */
+    }
+    
+    /* Style for the submenu */
+    .submenu {
+        display: none;
+        padding-left: 20px; /* Add indentation for submenu items */
+    }
+    
+    /* Style for active menu items */
+    .menu-item-active {
+        background-color: #f0f0f0; /* Add background color for active menu items */
+    }
+    
+    /* Style for menu links */
+    .horizontal-menu li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+    
+    /* Style for submenu links */
+    .submenu li a {
+        color: #666;
+    }
+}

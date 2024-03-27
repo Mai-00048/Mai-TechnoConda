@@ -1,0 +1,160 @@
+/* ImageSlider.css */
+.slider-container {
+  margin-top: 90px; /* Adjust margin-top as needed */
+  width: 100%;
+  overflow: hidden; /* Hide overflow content */
+  position: relative; /* Position arrows relative to the container */
+}
+
+.slider-scroll {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping of slider items */
+}
+
+.slider-item:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+.slider-button:hover {
+  border: none; /* Remove border on hover */
+}
+
+.slider-image {
+  height: 400px;
+  width: 290px;
+  border: none; /* Remove border */
+}
+.slider-button:hover {
+  border: none; /* Remove border on hover */
+}
+.slider-button {
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  padding: 0; /* Remove padding */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+.slider-button:active, /* Remove outline when button is clicked */
+.slider-button:focus { /* Remove outline when button is focused */
+  outline: none;
+}
+
+.slider-button img {
+  display: block; /* Make the image fill the button */
+  width: 100%; /* Ensure the image fills the button width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 24px;
+  color: transparent;
+  z-index: 1;
+  position: absolute; /* Position arrows absolutely */
+  top: 50%; /* Align arrows vertically */
+  background-color: rgba(107, 42, 42, 0.5); /* Background color of arrows */
+  border-radius: 50%; /* Circle shape */
+  width: 60px; /* Width of arrows */
+  height: 60px; /* Height of arrows */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center arrow symbol */
+  align-items: center; /* Center arrow symbol */
+  cursor: pointer; /* Add cursor pointer */
+  transition: background-color 0.2s; /* Add transition effect */
+}
+
+.slick-prev {
+  left: 10px; /* Position the left arrow */
+}
+
+.slick-next {
+  right: 10px; /* Position the right arrow */
+}
+ 
+.brand-partners-gap {
+  margin-bottom: 10%; /* Add some space before the brand-partners */
+}
+
+ 
+.brand-partners {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Adjust the color as needed */
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.small-image {
+  width: 25%; /* Adjust the width of the small images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Adjust the spacing between images */
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-slider {
+    background-color: rgb(245, 243, 237);
+    /* Add your desired styles for the mobile slider container */
+    width: 100%; /* Make slider fill the width of the container */
+    height: auto; /* Ensure aspect ratio is maintained */
+  }
+
+  .slider-image {
+    height: 230px;
+    width: 180px;
+    margin-right: 40px ;
+    border: none; /* Remove border */
+  }
+
+  /* Adjust margin for the last image to prevent extra space */
+  .slider-image:last-child {
+    margin-right: 0;
+  }
+}
+
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  /* Styling for the phone version */
+  .phone-version {
+    padding: 13px; /* Add padding for better spacing */
+  }
+
+  /* Styling for the image rows */
+  .image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust spacing between images */
+    margin-bottom: 20px; /* Add margin bottom for separation */
+  }
+/* Styling for individual images */
+.small-image {
+ 
+  height: 12rem; /* Adjust height to 5x5 */
+  margin-bottom: 10px; /* Add margin bottom for separation */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Add box shadow for depth */
+}
+ 
+
+.phone-version .small-image {
+  width: calc(40% - -19px); /* Adjust image width to fit two images in one row */
+}
+
+
+ /* CSS for the brand partners section in the phone version */
+.phone-version .brand-partners {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+}
+
+

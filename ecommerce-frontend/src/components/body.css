@@ -1,0 +1,140 @@
+.body-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.text-description {
+  flex: 1;
+  padding: 100px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.image-container {
+  flex: 1;
+  padding: 70px 10px 70px 90px; 
+}
+
+.image-container img {
+  max-width: 70%; /* Ensure the image takes up the available width */
+  height: auto;
+  margin-left: 20px; /* Move the image to the right */
+}
+
+.text-description h2 {
+  font-size: 24px; /* Example style for the title */
+  color: #333; /* Example color for the title */
+}
+
+.text-description p {
+  font-size: 16px; /* Example style for the paragraph */
+  line-height: 1.5; /* Example line height for the paragraph */
+  color: #666; /* Example color for the paragraph */
+}
+.text-description h2,
+.text-description p {
+  text-align: center;
+}
+.button-48 {
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  padding: 15px 30px; /* Adjust padding as needed */
+  border: 0;
+  background-color: #abbb76;
+  font-size: 17.5px;
+  line-height: 30px;
+  font-weight: 300; /* Adjust font weight for skinny font */
+  margin-left: 40%; /* Move the button to the right */
+}
+.button-49 {
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  padding: 15px 30px; /* Adjust padding as needed */
+  border: 0;
+  background-color: #abbb76;
+  font-size: 17.5px;
+  line-height: 30px;
+  font-weight: 300; /* Adjust font weight for skinny font */
+ 
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.image2-container {
+  max-width: 40%; /* Adjust max-width as needed */
+  margin-left: 10%; /* Move the container to the right */
+}
+
+.text2-description {
+  flex: 1;
+  padding: 20px;
+  font-family: 'Tajawal', sans-serif;
+  text-align: center; /* Center the text horizontally */
+  margin-left: 50%; /* Move the text to the right */
+  margin-top: -390px; /* Move the text up */
+}
+
+
+.image2-container img {
+  max-width: 100%; /* Ensure the image fits within its container */
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* CSS for the phone version */
+  .body-container {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+  }
+
+  .text-description,
+  .text2-description {
+    text-align: center;
+    margin-bottom: 20px; /* Add space between text and images */
+  }
+
+  .image-container img,
+  .image2-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Add space between images */
+  }
+
+  .new-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+  }
+
+  .image2-container img {
+    width: 90%; /* Adjust image width */
+  }
+
+  /* CSS for the phone version */
+.phone-version {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.phone-version 
+.phone-version .image-container-phone {
+  margin-bottom: 20px;
+}
+
+.phone-version .image-container-phone img {
+  width: 80%; /* Adjust image width */
+  height: auto;
+}
+
+
+}
