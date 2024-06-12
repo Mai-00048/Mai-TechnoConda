@@ -17,56 +17,31 @@
 
   
   }
-  .social-circle {
-    display: inline-block;
-    width: 70px; /* Width of the circle */
-    height: 70px; /* Height of the circle */
-    border-radius: 50%; /* Make it circular */
-    background-color: #f0f0f0; /* Background color */
-    text-align: center; /* Center the content */
-    margin-right: 20px; /* Adjust spacing */
-  }
-  
-  .social-circle a {
-    display: block; /* Full link area */
-    width: 100%;
-    height: 100%;
-  }
-  
-  .social-circle img {
-    width: 50%; /* Adjust the width of the image */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 25%; /* Adjust vertical position */
-  }
-  
-  .social-circle {
-    display: inline-block;
-    margin-right: 10px; /* Adjust as needed */
-    border-radius: 50%;
-    background-color: #f0f0f0; /* Background color of the circle */
-    width: 40px; /* Width of the circle */
-    height: 40px; /* Height of the circle */
-    text-align: center;
-  }
-  
-  .social-circle img {
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
-    margin: 5px; /* Adjust as needed */
-  }
-  
-  /* Social icons list */
-  .social-icons {
+
+  .no-bullets {
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
-  
-  .social-icons li {
-    display: inline;
-    margin-right: 10px; /* Adjust spacing between icons */
+
+ 
+  .social-circle a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px; /* Adjust the spacing between icons */
+    width: 50px; /* Adjust the size of the icons */
+    height: 50px; /* Adjust the size of the icons */
+    border-radius: 50%; /* Makes the icons circles */
+    background-color: transparent;
+    text-decoration: none; /* Remove underline from links */
+    border: 2px solid  rgb(106, 131, 113); /* Add black border */
   }
-  
+
+  .social-circle a i {
+    font-size: 24px; /* Adjust the size of the icons */
+    color:  rgb(106, 131, 113); /* Add black border */
+  }
   /* Link list */
   .site-footer__linklist {
     list-style-type: none;
@@ -85,4 +60,51 @@
     margin-top: 20px; /* Adjust spacing from link list */
   }
   
+   /* Additional CSS for Phone Version */
+@media only screen and (max-width: 768px) {
+  .site-footer__linklist li a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set the color of links to black */
+    writing-mode: sideways-rl; /* Make text vertical */
+    display: block; /* Change display to block */
+    font-size: small;
+    margin-bottom: -8px; /* Add space between vertical texts */
+
+  
+  }
+  .site-footer {
+    margin-top: 25%;
+    background-color: #f0f0f0;
+    padding: 40px 30px 5%; /* Increase padding to adjust height */
+    text-align: center;
+    margin-bottom: 40%; /* Add margin to the bottom of the footer */
+ 
+  }
+  .site-footer__linklist li {
+    margin-right: 0;
+  }
+  .site-footer__linklist li {
+    margin: -10px;
+    
+  }
    
+  .social-circle a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px; /* Adjust the spacing between icons */
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px; /* Adjust the size of the icons */
+    border-radius: 50%; /* Makes the icons circles */
+    background-color: transparent;
+    text-decoration: none; /* Remove underline from links */
+    border: 2px solid rgb(100, 98, 98); /* Add black border */
+  
+  }
+
+  .social-circle a i {
+    font-size: 24px; /* Adjust the size of the icons */
+    color:rgb(100, 98, 98); /* Add black border */
+  }
+  /* Add more styles for specific elements if needed */
+}

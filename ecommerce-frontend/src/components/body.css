@@ -2,51 +2,40 @@
   display: flex;
   align-items: center; /* Align items vertically */
 }
-
+ 
 .text-description {
-  flex: 1;
-  padding: 100px;
-  font-family: 'Tajawal', sans-serif;
+  font-family: Arial, sans-serif;
+  color: #333; /* Adjust color as needed */
+  text-align: center;
+  margin-left: 200px; /* Adjust the left margin as needed */
+  margin-top: 1%;
 }
 
-.image-container {
-  flex: 1;
-  padding: 70px 10px 70px 90px; 
-}
-
-.image-container img {
-  max-width: 70%; /* Ensure the image takes up the available width */
-  height: auto;
-  margin-left: 20px; /* Move the image to the right */
+.text-description p {
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .text-description h2 {
-  font-size: 24px; /* Example style for the title */
-  color: #333; /* Example color for the title */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.text-description p {
-  font-size: 16px; /* Example style for the paragraph */
-  line-height: 1.5; /* Example line height for the paragraph */
-  color: #666; /* Example color for the paragraph */
-}
-.text-description h2,
-.text-description p {
-  text-align: center;
-}
-.button-48 {
-  display: inline-block;
-  outline: 0;
-  text-align: center;
+.text-description button {
+  background-color: #32804d; /* Adjust color as needed */
+  color: #fff; /* Adjust color as needed */
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
   cursor: pointer;
-  padding: 15px 30px; /* Adjust padding as needed */
-  border: 0;
-  background-color: #abbb76;
-  font-size: 17.5px;
-  line-height: 30px;
-  font-weight: 300; /* Adjust font weight for skinny font */
-  margin-left: 40%; /* Move the button to the right */
+  transition: background-color 0.3s ease;
 }
+
+.text-description button:hover {
+  background-color: #00b330; /* Adjust color as needed */
+}
+
 .button-49 {
   display: inline-block;
   outline: 0;
@@ -54,38 +43,102 @@
   cursor: pointer;
   padding: 15px 30px; /* Adjust padding as needed */
   border: 0;
-  background-color: #abbb76;
+  background-color: #32804d;
   font-size: 17.5px;
   line-height: 30px;
   font-weight: 300; /* Adjust font weight for skinny font */
  
 }
+/* Add these styles to your existing body.css file or create a new CSS file */
 
-.flex-container {
+.fixed-button-container {
+  position: fixed;
+  left: 40px; /* Adjust as needed */
+  bottom: 30px; /* Adjust as needed */
+  z-index: 9999;
+}
+
+
+.floating-top-button {
+  width: 60px; /* Adjust as needed */
+  height: 60px; /* Adjust as needed */
+  background-color: #25D366; /* Match the color of your Floating WhatsApp button */
+  border-radius: 50%; /* Make it a circle */
+  border: none;
   display: flex;
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.arrow-up-icon {
+  color: #fff; /* Match the color of your Floating WhatsApp button */
+  font-size: 30px; /* Adjust as needed */
+}
+.container {
+  display: flex;
+  align-items: center; /* Vertically center items */
 }
 
 .image2-container {
-  max-width: 40%; /* Adjust max-width as needed */
-  margin-left: 10%; /* Move the container to the right */
+  flex: 1; /* Let image2 take up remaining space */
+  text-align: center; /* Align image center horizontally */
 }
 
 .text2-description {
-  flex: 1;
-  padding: 20px;
-  font-family: 'Tajawal', sans-serif;
-  text-align: center; /* Center the text horizontally */
-  margin-left: 50%; /* Move the text to the right */
-  margin-top: -390px; /* Move the text up */
+  flex: 1; /* Let text2 take up remaining space */
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
 }
 
-
-.image2-container img {
-  max-width: 100%; /* Ensure the image fits within its container */
-  height: auto;
+.text2-description p {
+  font-size: 18px;
+  line-height: 1.5;
 }
 
+.text2-description h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text2-description button {
+  background-color: #32804d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.text2-description button:hover {
+  background-color: #00b330;
+}
+
+.image2-size {
+  width: 49rem;
+  height: 38rem;
+}
+
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-animation.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-size {
+  width: 40rem;
+  height: auto;  
+  margin-left: 20%;
+}
+ 
 @media only screen and (max-width: 768px) {
   /* CSS for the phone version */
   .body-container {
@@ -99,24 +152,54 @@
     margin-bottom: 20px; /* Add space between text and images */
   }
 
-  .image-container img,
-  .image2-container img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px; /* Add space between images */
+  .fixed-button-container-gray {
+    position: fixed;
+    bottom: 33px; /* Adjust this value as needed */
+    left: 50px; /* Adjust this value as needed */
+    z-index: 9999; /* Increase the z-index value */
   }
-
+  
+  .floating-top-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .floating-top-button:hover {
+    background-color: darkgray;
+  }
+  
   .new-container {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
     padding: 20px;
   }
-
-  .image2-container img {
-    width: 90%; /* Adjust image width */
+ 
+  .img {
+    width: 60%;
+    height: 50%;
+    margin-bottom: 20px; /* Add space between images */
   }
+  .floating-whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999; /* Ensure it appears on top of other elements */
+  }
+  .floating-whatsapp-container .float {
+    right: 40%; /* Adjust the distance from the left */
+    /* You can adjust other positioning properties as needed */
+}
 
+  /* Adjust styling as needed */
+  
   /* CSS for the phone version */
 .phone-version {
   display: flex;
@@ -125,10 +208,8 @@
   text-align: center;
   padding: 20px;
 }
-
-.phone-version 
-.phone-version .image-container-phone {
-  margin-bottom: 20px;
+.brand-partners-gap {
+  margin-top: 3%; /* Add some space before the brand-partners */
 }
 
 .phone-version .image-container-phone img {

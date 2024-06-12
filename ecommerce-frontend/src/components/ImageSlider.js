@@ -20,6 +20,27 @@ const ImageSlider = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll('.scroll-animation');
+      elements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (rect.top < windowHeight * 0.75) {
+          element.classList.add('animate');
+        } else {
+          element.classList.remove('animate');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const desktopSettings = {
     dots: true,
     infinite: true,
@@ -28,7 +49,7 @@ const ImageSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    adaptiveHeight: true
+    adaptiveHeight: true,
   };
 
   const mobileSettings = {
@@ -39,59 +60,76 @@ const ImageSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    adaptiveHeight: true
+    adaptiveHeight: true,
   };
 
   return (
-    <div className="slider-container">
+    <div className={`slider-container ${isMobile ? 'mobile' : 'desktop'}`}>
       {!isMobile ? (
         <div className="desktop-slider">
+          <br></br>
+        <h2 className="textslider"> جهاز الكمبيوتر الخاص بك واستفد</h2>
+        <div className="gap"></div>
           <Slider {...desktopSettings}>
             <div>
-              <img src="./coding.jpg" alt="Description of the image" className="slider-image" />
+              <img src="./dell.png" alt="Description of the image" className="slider-image" />
             </div>
             <div>
-              <img src="./mac3.jpg" alt="Description of the new image" className="slider-image" />
+              <img src="./hp.png" alt="Description of the new image" className="slider-image" />
             </div>
             <div>
-              <img src="./mac2.jpg" alt="Description of the new image" className="slider-image" />
+              <img src="./mackbook.png" alt="Description of the new image" className="slider-image" />
+            </div>
+            <div>
+              <img src="./lonovo.png" alt="Description of the new image" className="slider-image" />
+            </div>
+            <div>
+              <img src="./msi.png" alt="Description of the new image" className="slider-image" />
             </div>
             {/* Add more images as needed */}
           </Slider>
+          <br></br>
         </div>
       ) : (
         <div className="mobile-slider">
+            <br></br>
+            <h2 className="textslider"> جهاز الكمبيوتر الخاص بك واستفد</h2>
+            <div className="gap"></div>
           <Slider {...mobileSettings}>
-            <div>
-              <img src="./coding.jpg" alt="Description of the image" className="slider-image" />
+          <div>
+              <img src="./dell.png" alt="Description of the image" className="slider-image" />
             </div>
             <div>
-              <img src="./mac3.jpg" alt="Description of the new image" className="slider-image" />
+              <img src="./hp.png" alt="Description of the new image" className="slider-image" />
             </div>
             <div>
-              <img src="./mac2.jpg" alt="Description of the new image" className="slider-image" />
+              <img src="./mackbook.png" alt="Description of the new image" className="slider-image" />
+            </div>
+            <div>
+              <img src="./lonovo.png" alt="Description of the new image" className="slider-image" />
+            </div>
+            <div>
+              <img src="./msi.png" alt="Description of the new image" className="slider-image" />
             </div>
             {/* Add more images as needed */}
           </Slider>
         </div>
       )}
 
- 
-{isMobile && (
-  <div className="phone-version">
-        <div className="brand-partners-gap"></div>
-    <div className="brand-partners">شركاء العلامة التجارية</div>
-    <br></br>
-    <div className="image-row">
-      <img src="./mac3.jpg" alt="Image 1" className="small-image" />
-      <img src="./mac3.jpg" alt="Image 2" className="small-image" />
-    </div>
-    <div className="image-row">
-      <img src="./mac3.jpg" alt="Image 3" className="small-image" />
-      <img src="./mac3.jpg" alt="Image 4" className="small-image" />
-    </div>
-  </div>
+      {isMobile && (
+        <div className="phone-version">
+          <div className="brand-partners-gap"></div>
+          <div className="brand-partners">شركاء العلامة التجارية</div>
 
+          <div className="image-row scroll-animation">
+          <img src="./b1.jpg" alt="Image 1" className="small-image" />
+            <img src="./b3.jpg" alt="Image 3" className="small-image" />
+          </div>
+          <div className="image-row scroll-animation">
+          <img src="./b1.jpg" alt="Image 1" className="small-image" />
+            <img src="./b3.jpg" alt="Image 3" className="small-image" />
+          </div>
+        </div>
       )}
 
       {/* Brand partners */}
@@ -104,16 +142,16 @@ const ImageSlider = () => {
 
       {/* PC version image rows */}
       {!isMobile && (
-        <div className="desktop-version">
+        <div className="desktop-version scroll-animation">
           <div className="image-row">
-            <img src="./mac3.jpg" alt="Image 1" className="small-image" />
-            <img src="./mac3.jpg" alt="Image 2" className="small-image" />
-            <img src="./mac3.jpg" alt="Image 3" className="small-image" />
+            <img src="./b1.jpg" alt="Image 1" className="small-image" />
+            <img src="./b2.png" alt="Image 2" className="small-image" />
+            <img src="./b3.jpg" alt="Image 3" className="small-image" />
           </div>
           <div className="image-row">
-            <img src="./mac3.jpg" alt="Image 4" className="small-image" />
-            <img src="./mac3.jpg" alt="Image 5" className="small-image" />
-            <img src="./mac3.jpg" alt="Image 6" className="small-image" />
+          <img src="./b3.jpg" alt="Image 3" className="small-image" />
+          <img src="./b1.jpg" alt="Image 1" className="small-image" />
+            <img src="./b2.png" alt="Image 2" className="small-image" />
           </div>
         </div>
       )}

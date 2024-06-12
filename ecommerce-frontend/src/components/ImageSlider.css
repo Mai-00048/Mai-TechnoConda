@@ -2,8 +2,7 @@
 .slider-container {
   margin-top: 90px; /* Adjust margin-top as needed */
   width: 100%;
-  overflow: hidden; /* Hide overflow content */
-  position: relative; /* Position arrows relative to the container */
+ 
 }
 
 .slider-scroll {
@@ -19,32 +18,21 @@
   border: none; /* Remove border on hover */
 }
 
-.slider-image {
-  height: 400px;
-  width: 290px;
-  border: none; /* Remove border */
+.gap{
+  margin-bottom: 50px;
 }
 .slider-button:hover {
   border: none; /* Remove border on hover */
 }
-.slider-button {
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  padding: 0; /* Remove padding */
-  cursor: pointer; /* Add cursor pointer */
+.textslider{
+  font-family: 'Tajawal', sans-serif;
+  text-align: center;
 }
-
-.slider-button:active, /* Remove outline when button is clicked */
-.slider-button:focus { /* Remove outline when button is focused */
-  outline: none;
+.desktop-slider{
+background-color: #f0f0f0;
+ 
 }
-
-.slider-button img {
-  display: block; /* Make the image fill the button */
-  width: 100%; /* Ensure the image fills the button width */
-  height: auto; /* Maintain aspect ratio */
-}
-
+ 
 .slick-prev,
 .slick-next {
   font-size: 24px;
@@ -52,7 +40,7 @@
   z-index: 1;
   position: absolute; /* Position arrows absolutely */
   top: 50%; /* Align arrows vertically */
-  background-color: rgba(107, 42, 42, 0.5); /* Background color of arrows */
+  background-color: rgba(6, 59, 20, 0.5); /* Background color of arrows */
   border-radius: 50%; /* Circle shape */
   width: 60px; /* Width of arrows */
   height: 60px; /* Height of arrows */
@@ -74,7 +62,6 @@
 .brand-partners-gap {
   margin-bottom: 10%; /* Add some space before the brand-partners */
 }
-
  
 .brand-partners {
   text-align: center;
@@ -91,22 +78,45 @@
 }
 
 .small-image {
-  width: 25%; /* Adjust the width of the small images */
-  height: auto; /* Maintain aspect ratio */
+  width: 15%; /* Adjust the width of the small images */
+  height: 100%; /* Maintain aspect ratio */
   margin: 0 10px; /* Adjust the spacing between images */
 }
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
+/* ImageSlider.css */
+.slider-image {
+  width: 100%; /* Adjust the width percentage as needed */
+  max-height: 100%; /* Maintain aspect ratio */
+  border: none; /* Remove border */
+}
+.scroll-animation.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
 @media only screen and (max-width: 768px) {
   .mobile-slider {
-    background-color: rgb(245, 243, 237);
-    /* Add your desired styles for the mobile slider container */
-    width: 100%; /* Make slider fill the width of the container */
-    height: auto; /* Ensure aspect ratio is maintained */
+    background-color: rgb(197, 195, 191);
+    max-height: auto;
+    max-width: auto;
+    height: 26rem;
   }
-
+  .scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
   .slider-image {
-    height: 230px;
-    width: 180px;
+    height: 200px;
+    width: 190px;
     margin-right: 40px ;
     border: none; /* Remove border */
   }
@@ -136,8 +146,8 @@
 .small-image {
  
   height: 12rem; /* Adjust height to 5x5 */
-  margin-bottom: 10px; /* Add margin bottom for separation */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Add box shadow for depth */
+  margin-top: 10px; /* Add margin bottom for separation */
+  
 }
  
 

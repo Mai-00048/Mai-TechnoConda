@@ -3,6 +3,8 @@ import './Footer.css'; // Import CSS for footer styling
 <div className="footer-gap"></div>
 
 const Footer = () => {
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="your-integrity-hash-here" crossorigin="anonymous" />
+
   return (
     
     <footer className="site-footer">
@@ -34,28 +36,26 @@ const Footer = () => {
 
       <div className="site-footer__section">
   <ul className="no-bullets inline-list site-footer__linklist">
-    <li>
-      <div className="social-circle">
-        <a href="whatsapp_link_here" target="_blank" rel="noopener noreferrer">
-          <img src="./whatsap.png" alt="WhatsApp Icon" />
-        </a>
-      </div>
-    </li>
-    <li>
-      <div className="social-circle">
-        <a href="./insta.png" target="_blank" rel="noopener noreferrer">
-          <img src="insta.png" alt="Instagram Icon" />
-        </a>
-      </div>
-    </li>
+    <div className="social-circle">
+      <a href="whatsapp_link_here" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-whatsapp"></i>
+      </a>
+      <a href="instagram_link_here" className="instagram-link" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-instagram"></i>
+      </a>
+      <a href="snapchat_link_here" className="snapchat-link" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-snapchat-ghost"></i>
+      </a>
+      <a href="tiktok_link_here" className="tiktok-link" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-tiktok"></i>
+      </a>
+    </div>
     <li><a href="/search">البحث</a></li>
     <li><a href="/pages/become-a-retailer">كن تاجرًا بالتجزئة</a></li>
     <li><a href="/pages/contact">اتصل بنا</a></li>
     <li><a href="/pages/delivery-and-returns">التوصيل والإرجاع</a></li>
     <li><a href="/policies/privacy-policy">سياسة الخصوصية</a></li>
-    <li><a href="/policies/refund-policy">سياسة الاسترجاع</a></li>
     <li><a href="/pages/terms-conditions">الشروط والأحكام</a></li>
-    <li><a href="/pages/sizing">المقاسات</a></li>
     <li><a href="/pages/warranty-and-returns">الضمان والإرجاع</a></li>
   </ul>
 </div>
